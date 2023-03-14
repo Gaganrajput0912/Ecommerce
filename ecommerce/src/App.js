@@ -1,22 +1,23 @@
 //import './App.css';
-import { useState } from 'react';
-import { Container } from 'react-bootstrap';
-import { Route, Routes } from 'react-router-dom';
-import Header from './Componet/Layout/Header';
-import About from './Pages/About';
-import Home from './Pages/Home';
-import Store from './Pages/Store';
-import Cart from './Componet/Cart/Cart';
-import Footer from './Componet/Layout/Footer';
+import { useState } from "react";
+import { Container } from "react-bootstrap";
+import { Route, Routes } from "react-router-dom";
+import Header from "./Componet/Layout/Header";
+import About from "./Pages/About";
+import Home from "./Pages/Home";
+import Store from "./Pages/Store";
+import Cart from "./Componet/Cart/Cart";
+import Footer from "./Componet/Layout/Footer";
+import ContactUs from "./Pages/ContactUs";
 function App() {
-  const [showCart,setShowCart] = useState(false)
-  const onShowCartHandler = () =>{
-      setShowCart(true);
+  const [showCart, setShowCart] = useState(false);
+  const onShowCartHandler = () => {
+    setShowCart(true);
   };
 
   const onHideCartHandler = () => {
     setShowCart(false);
-  }
+  };
   return (
     // <Container>
     //   <Header></Header>
@@ -26,9 +27,10 @@ function App() {
       <Header onOpen={onShowCartHandler}></Header>
       <Container>
         <Routes>
-          <Route path='/home' element={<Home />} />
-          <Route path='/' element={<Store />} />
-          <Route path='/about' element={<About />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/" element={<Store />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<ContactUs />} />
         </Routes>
       </Container>
       <Footer />

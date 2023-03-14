@@ -38,6 +38,9 @@ const Header = (props) => {
             <Nav.Link className="me-5" to="/about" as={NavLink}>
               About
             </Nav.Link>
+            <Nav.Link className="me-5" to="/contact" as={NavLink}>
+              Contact Us
+            </Nav.Link>
           </Nav>
           <Button
             onClick={props.onOpen}
