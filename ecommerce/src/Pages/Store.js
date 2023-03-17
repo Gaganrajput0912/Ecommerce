@@ -6,34 +6,39 @@ const Store = () => {
     {
       id: "p1",
       tag: "Album 1",
-      title: "Colors",
-      price: 100,
+      title: "White Shirt",
+      price: 500,
       imageUrl:
-        "https://prasadyash2411.github.io/ecom-website/img/Album%201.png",
+        "https://raw.githubusercontent.com/sonu85336/Building-your-Ecommerce-Website/0c627ee5fb9dc2ff52686dd232ca9539ae5749e8/public/product1of1.jpg",
     },
     {
       id: "p2",
       tag: "Album 2",
-      title: "Black and white Colors",
-      price: 50,
+      title: "blue and white Shirt",
+
+      price: 500,
       imageUrl:
-        "https://prasadyash2411.github.io/ecom-website/img/Album%202.png",
+        " https://raw.githubusercontent.com/sonu85336/Building-your-Ecommerce-Website/e72ffd882a1145ba9cefa1040220faaa8aed2578/src/assets/productimage/product2of1.jpg",
     },
     {
       id: "p3",
       tag: "Album 3",
-      title: "Yellow and Black Colors",
-      price: 70,
+      title: " white and Black top",
+
+      price: 700,
+
       imageUrl:
-        "https://prasadyash2411.github.io/ecom-website/img/Album%203.png",
+        "  https://raw.githubusercontent.com/sonu85336/Building-your-Ecommerce-Website/4fdd28af379f9bdab9b71badb2b3c4ef351ada25/prod3of1.jpg",
     },
     {
       id: "p4",
       tag: "Album 4",
-      title: "Blue Color",
-      price: 100,
+      title: "Black Skirt",
+
+      price: 900,
+
       imageUrl:
-        "https://prasadyash2411.github.io/ecom-website/img/Album%204.png",
+        " https://raw.githubusercontent.com/sonu85336/Building-your-Ecommerce-Website/e72ffd882a1145ba9cefa1040220faaa8aed2578/src/assets/productimage/product4of1.jpg",
     },
   ];
 

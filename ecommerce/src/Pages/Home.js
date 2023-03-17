@@ -1,16 +1,13 @@
 import { Button, Col, Container, Row, Stack } from "react-bootstrap";
-const divStyle = {
-  background: "#777",
-  padding: "40px",
-};
+
 const ColoredLine = ({ color }) => (
-    <hr
-        style={{
-            color: color,
-            backgroundColor: color,
-            height: 5
-        }}
-    />
+  <hr
+    style={{
+      color: color,
+      backgroundColor: color,
+      height: 5,
+    }}
+  />
 );
 const Home = () => {
   return (
@@ -40,9 +37,9 @@ const Home = () => {
       </Row>
       <ColoredLine color="black" width="" />
       <Container fluid>
-      <h1 className="text-center">Tours</h1>
+        <h1 className="text-center">Tours</h1>
 
-        <Stack gap={3}  className="justify-content-between align-items-center">
+        <Stack gap={3} className="justify-content-between align-items-center">
           <div>
             <div className="bg-light border ">
               <span className="p-2">JUL 16</span>
@@ -57,7 +54,12 @@ const Home = () => {
             <div className="bg-light border ">
               <span className="p-2">JUL19</span>
               <span className="p-2">TORONTO,ON</span>
-              <span className="p-2" style={{marginLeft: '20px', marginRight: '45px'}}>BUDWEISER STAGE</span>
+              <span
+                className="p-2"
+                style={{ marginLeft: "20px", marginRight: "45px" }}
+              >
+                BUDWEISER STAGE
+              </span>
               <Button variant="outline-primary" className="m-2 p-2">
                 {" "}
                 Book Tickets
@@ -67,7 +69,12 @@ const Home = () => {
             <div className="bg-light border ">
               <span className="p-2">JUL 22</span>
               <span className="p-2"> BRISTOW, VA</span>
-              <span className="p-2" style={{marginLeft: '20px', marginRight: '65px'}}>JIGGY LUBE LIVE</span>
+              <span
+                className="p-2"
+                style={{ marginLeft: "20px", marginRight: "65px" }}
+              >
+                JIGGY LUBE LIVE
+              </span>
               <Button variant="outline-primary" className="m-2 p-2">
                 {" "}
                 Book Tickets
@@ -77,7 +84,13 @@ const Home = () => {
             <div className="bg-light border ">
               <span className="p-2">JUL 29</span>
               <span className="p-2">PHOENIX, AZ</span>
-              <span className="p-2" style={{marginLeft: '20px', marginRight: '45px'}}> AK-CHIN PAVILION</span>
+              <span
+                className="p-2"
+                style={{ marginLeft: "20px", marginRight: "45px" }}
+              >
+                {" "}
+                AK-CHIN PAVILION
+              </span>
               <Button variant="outline-primary" className="m-2 p-2">
                 {" "}
                 Book Tickets
@@ -87,7 +100,12 @@ const Home = () => {
             <div className="bg-light border ">
               <span className="p-2">AUG 2</span>
               <span className="p-2">LAS VEGAS, NV</span>
-              <span className="p-2" style={{marginLeft: '20px', marginRight: '45px'}}>T-MOBILE ARENA</span>
+              <span
+                className="p-2"
+                style={{ marginLeft: "20px", marginRight: "45px" }}
+              >
+                T-MOBILE ARENA
+              </span>
               <Button variant="outline-primary" className="m-2 p-2">
                 {" "}
                 Book Tickets
@@ -97,7 +115,13 @@ const Home = () => {
             <div className="bg-light border ">
               <span className="p-2">AUG 7</span>
               <span className="p-2">CONCORD, CA</span>
-              <span className="p-2" style={{marginLeft: '20px', marginRight: '25px'}}> CONCORD PAVILION</span>
+              <span
+                className="p-2"
+                style={{ marginLeft: "20px", marginRight: "25px" }}
+              >
+                {" "}
+                CONCORD PAVILION
+              </span>
               <Button variant="outline-primary" className="m-2 p-2">
                 {" "}
                 Book Tickets

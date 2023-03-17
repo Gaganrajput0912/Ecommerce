@@ -1,7 +1,8 @@
 import { useContext } from "react";
 import { Button, Container, Nav, Navbar } from "react-bootstrap";
-import { NavLink } from "react-router-dom";
+import { NavLink, useHistory } from "react-router-dom";
 import CartContext from "../../store/cart-context";
+import LoginContext from "../../store/LoginContext";
 //import classes from './Header.module.css';
 const divStyle = {
   background: "#777",
@@ -19,28 +20,44 @@ const fontSize = {
 
 const Header = (props) => {
   const cartCntx = useContext(CartContext);
+  const authCtx = useContext(LoginContext);
+  const history = useHistory();
 
   const numberOfCartItems = cartCntx.items.reduce((curNumber, item) => {
     return curNumber + item.amount;
   }, 0);
+  console.log(cartCntx.items.amount);
+
+  const logoutHandler = () => {
+    authCtx.logout();
+    history.replace("/");
+  };
+
   return (
     <>
       <Navbar sticky="top" bg="dark" variant="dark">
         <Container fluid style={fontSize}>
-          <Navbar.Brand href="/home">MUSIC</Navbar.Brand>
+          <Navbar.Brand href="/home">The Generics</Navbar.Brand>
           <Nav className="justify-content-center flex-grow-1 pe-3">
-            <Nav.Link className="me-5" to="/home" as={NavLink}>
+            <Nav.Link className="me-3" to="/home" as={NavLink}>
               Home
             </Nav.Link>
-            <Nav.Link className="me-5" to="/" as={NavLink}>
+            <Nav.Link className="me-3" to="/" as={NavLink}>
               Store
             </Nav.Link>
-            <Nav.Link className="me-5" to="/about" as={NavLink}>
+            <Nav.Link className="me-3" to="/about" as={NavLink}>
               About
             </Nav.Link>
-            <Nav.Link className="me-5" to="/contact" as={NavLink}>
+            <Nav.Link className="me-3" to="/ContactUs" as={NavLink}>
               Contact Us
             </Nav.Link>
+            <Nav.Link className="me-3" to="/login" as={NavLink}>
+              Login
+            </Nav.Link>
+
+            <button className="me-3" onClick={logoutHandler}>
+              Logout
+            </button>
           </Nav>
           <Button
             onClick={props.onOpen}
@@ -74,7 +91,7 @@ const Header = (props) => {
         </Container>
       </Navbar>
       <Container fluid className="text-center" style={divStyle}>
-        <h1 style={titleStyle}>The Generics</h1>
+        <h1 style={titleStyle}>The Genrics</h1>
       </Container>
     </>
   );
